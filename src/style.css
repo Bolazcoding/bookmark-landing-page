@@ -19,6 +19,7 @@ html {
 
 body {
   font-family: "Rubik", sans-serif;
+  position: relative;
 }
 
 button {
@@ -32,7 +33,6 @@ button {
 }
 
 .bookmark-header {
-  margin-top: 4rem;
   max-width: 105rem;
 }
 
@@ -40,6 +40,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 4rem;
 }
 
 .bookmark-logo {
@@ -188,11 +189,9 @@ button {
 }
 
 .features-content-header {
-  /* padding: 0 30rem; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border-bottom: 2px solid var(--Grey-50); */
   position: relative;
   gap: 10rem;
 }
@@ -206,10 +205,6 @@ button {
   width: 56%;
   border-bottom: 2px solid var(--Grey-50);
 }
-
-/* .horizontal-line {
-  border-bottom: 3px solid var(--Grey-50);
-} */
 
 .content-header {
   font-size: 1.4rem;
@@ -270,35 +265,12 @@ button {
   justify-content: center;
   align-items: center;
   gap: 12rem;
-  /* transition: all 5s ease-in-out; */
 
   opacity: 0;
   transform: translateY(20px);
   animation: enterBounce 0.8s forwards; /* 'forwards' keeps final state */
   animation-delay: 0.2s; /* stagger effect */
 }
-
-@keyframes enterBounce {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-5px); /* slight bounce up */
-  }
-  80% {
-    transform: translateY(2px); /* bounce down a bit */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* final resting position, stays visible */
-  }
-}
-
-/* .features-details1 {
-  display: none;
-} */
 
 .features-details2 {
   display: none;
@@ -333,7 +305,6 @@ button {
   gap: 4rem;
   justify-content: center;
   align-items: center;
-  /* margin-top: 2rem; */
 }
 
 .extension-features-details {
@@ -363,7 +334,6 @@ button {
 }
 
 .dotted {
-  /* border: 3px dotted var(--Blue-950); */
   display: flex;
   font-size: 3rem;
   justify-content: center;
@@ -402,11 +372,6 @@ button {
 }
 
 .faq-questions {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  /* width: 40rem; */
   padding: 0 32rem;
   margin-top: 5rem;
 }
@@ -524,13 +489,10 @@ button {
   content: "";
   position: absolute;
   background-color: var(--Blue-600);
-  /* padding: 17rem 45rem 17rem 17rem; */
   top: 57%;
   left: -27.5%;
   bottom: -10%;
-  /* height: 1px; */
   width: 64%;
-  /* border-bottom: 2px solid var(--Grey-50); */
   border-bottom-right-radius: 20rem;
   display: var(--before-display, block);
 
@@ -545,13 +507,10 @@ button {
   position: absolute;
   background-color: var(--Blue-600);
   background-size: cover;
-  /* padding: 17rem 45rem 17rem 17rem; */
   top: 30%;
-  /* left: 55%; */
   right: -9%;
   bottom: 0;
   width: 54%;
-  /* border-bottom: 2px solid var(--Grey-50); */
   border-bottom-left-radius: 20rem;
   z-index: 0;
 }
@@ -566,4 +525,10 @@ button {
 .extension-paragraph,
 .faq-paragraph {
   padding: 0 30rem;
+}
+
+/* Mobile Navigation */
+
+.hidden-nav {
+  display: none;
 }

@@ -1,5 +1,10 @@
 "use strict";
 
+const openMenu = document.querySelector(".open-menu");
+const closeMenu = document.querySelector(".close-menu");
+const openMobileNav = document.querySelector(".sidebar-header");
+const closeDesNav = document.querySelector(".bookmark-logo");
+const navLink = document.querySelectorAll(".nav-list");
 const contentheader1 = document.querySelector(".content-header1");
 const contentheader2 = document.querySelector(".content-header2");
 const contentheader3 = document.querySelector(".content-header3");
@@ -20,6 +25,26 @@ const bg_animation = document.querySelector(".features");
 
 // contentFeatures2.style.display = "none";
 // contentFeatures3.style.display = "none";
+
+openMenu.addEventListener("click", function () {
+  closeDesNav.style.display = "none";
+  openMenu.style.display = "none";
+  openMobileNav.classList.remove("hidden-nav");
+});
+
+closeMenu.addEventListener("click", function () {
+  closeDesNav.style.display = "block";
+  openMenu.style.display = "block";
+  openMobileNav.classList.add("hidden-nav");
+});
+
+navLink.forEach(function (item) {
+  item.addEventListener("click", function () {
+    closeDesNav.style.display = "block";
+    openMenu.style.display = "block";
+    openMobileNav.classList.add("hidden-nav");
+  });
+});
 
 contentheader1.addEventListener("click", function () {
   content1El.style.setProperty("--before-display", "block");
