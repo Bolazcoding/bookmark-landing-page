@@ -17,15 +17,7 @@ const contentFeatures3 = document.querySelector(".features-details3");
 
 const bg_animation = document.querySelector(".features");
 
-// Show the pseudo-element
-// content1El.style.setProperty("--before-display", "block");
-
-// Hide it again
-// content1El.style.setProperty("--before-display", "none");
-
-// contentFeatures2.style.display = "none";
-// contentFeatures3.style.display = "none";
-
+// Mobile Navigation
 openMenu.addEventListener("click", function () {
   closeDesNav.style.display = "none";
   openMenu.style.display = "none";
@@ -46,6 +38,7 @@ navLink.forEach(function (item) {
   });
 });
 
+// Features Section toggle on and off
 contentheader1.addEventListener("click", function () {
   content1El.style.setProperty("--before-display", "block");
   content2El.style.setProperty("--before-display", "none");
@@ -77,4 +70,41 @@ contentheader3.addEventListener("click", function () {
   contentFeatures1.style.display = "none";
   contentFeatures2.style.display = "none";
   contentFeatures3.style.display = "flex";
+});
+
+// FAQ Function;
+const firstAnswer = document.querySelector(".answer");
+const questions = document.querySelectorAll(".faq-quest");
+const closeAnswer = document.querySelectorAll(".close-faq");
+const switch_icon = document.querySelectorAll(".open-faq");
+
+questions.forEach((question, i) => {
+  question.addEventListener("click", () => {
+    const answer = question.nextElementSibling;
+
+    if (answer.style.display === "block") {
+      // close it
+      answer.style.display = "none";
+      switch_icon[i].style.display = "block";
+      closeAnswer[i].style.display = "none";
+    } else {
+      // reset everything
+      document.querySelectorAll(".answer").forEach((ans) => {
+        ans.style.display = "none";
+      });
+
+      document.querySelectorAll(".open-faq").forEach((icon) => {
+        icon.style.display = "block";
+      });
+
+      document.querySelectorAll(".close-faq").forEach((icon) => {
+        icon.style.display = "none";
+      });
+
+      // open the clicked one
+      answer.style.display = "block";
+      switch_icon[i].style.display = "none";
+      closeAnswer[i].style.display = "block";
+    }
+  });
 });

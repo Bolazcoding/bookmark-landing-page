@@ -1,6 +1,7 @@
 :root {
   --Blue-600: hsl(231, 69%, 60%);
   --Red-400: hsl(0, 94%, 66%);
+  --Red-400: #fa5757;
 
   --Grey-50: hsl(0, 0%, 97%);
   --Grey-50: #f7f7f7;
@@ -511,5 +512,18 @@
   to {
     transform: translateY(-100%);
     opacity: 0;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scaleY(0.8);
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 70%;
+    max-height: 500px; /* adjust depending on your content */
   }
 }
