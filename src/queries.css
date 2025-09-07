@@ -29,6 +29,11 @@
   .features-content-header {
     gap: 8rem;
   }
+
+  .error-img {
+    top: 93.1%;
+    left: 53%;
+  }
 }
 
 /* 950px */
@@ -46,6 +51,11 @@
 
   .features-content-header {
     gap: 6rem;
+  }
+
+  .error-img {
+    top: 92.9%;
+    left: 53.5%;
   }
 }
 
@@ -125,6 +135,11 @@
     width: 24%;
   }
 
+  .error-img {
+    top: 94.68%;
+    left: 53.8%;
+  }
+
   .extension-features {
     gap: 2rem;
   }
@@ -197,6 +212,11 @@
   .features-content-header::before {
     left: 2%;
     width: 100%;
+  }
+
+  .error-img {
+    top: 90.25%;
+    left: 55%;
   }
 
   .content1::before {
@@ -277,7 +297,7 @@
   }
 
   .social-nav {
-    padding-top: 90%;
+    padding-top: 80%;
     justify-content: center;
   }
 
@@ -355,6 +375,11 @@
 
   .features-content-header::before {
     border-bottom: 0;
+  }
+
+  .error-img {
+    top: 88.6%;
+    left: 76%;
   }
 
   .content1 {
@@ -438,8 +463,6 @@
   }
 
   .hero-section::before {
-    /* right: -8%;
-    width: 100%; */
     right: -6%;
     bottom: 60%;
     width: 100%;
@@ -458,6 +481,11 @@
   .faq-paragraph,
   .faq-questions {
     padding: 0;
+  }
+
+  .error-img {
+    top: 88.6%;
+    left: 80%;
   }
 }
 

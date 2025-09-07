@@ -15,15 +15,16 @@
 html {
   font-size: 62.5%;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   position: relative;
 }
 
 button {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .container {
@@ -85,6 +86,7 @@ button {
   background-color: #fff;
   color: var(--Red-400);
   border: 2px solid var(--Red-400);
+  font-weight: 500;
 }
 
 .open-menu {
@@ -168,6 +170,13 @@ button {
   position: relative;
 }
 
+#features {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: enterBounce 0.8s forwards; /* 'forwards' keeps final state */
+  animation-delay: 0.2s; /* stagger effect */
+}
+
 .features-body {
   margin-top: 10rem;
 }
@@ -197,7 +206,7 @@ button {
 }
 
 .features-content-header::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 22.5%;
   bottom: 0;
@@ -221,7 +230,7 @@ button {
 }
 
 .content1::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 22.5%;
   bottom: 0;
@@ -234,7 +243,7 @@ button {
 }
 
 .content2::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 43%;
   bottom: 0;
@@ -247,7 +256,7 @@ button {
 }
 
 .content3::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 61.5%;
   bottom: 0;
@@ -455,18 +464,53 @@ button {
   margin-top: 3rem;
 }
 
+.email,
+.email::placeholder {
+  font-family: 'Rubik', sans-serif;
+  /* font-size: 2rem;
+  color: var(--Very-dark-cyan);
+  font-weight: 700; */
+}
+
 .contact-email {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 3rem;
   margin-top: 3rem;
 }
 
 .email {
   border: none;
-  padding: 1.2rem 2rem;
+  padding: 1.2rem 10rem 1.2rem 1.2rem;
   border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.email-error {
+  border: 2px solid var(--Red-400);
+}
+
+.email-success {
+  border: 2px solid green;
+}
+
+.error-img {
+  position: absolute;
+  top: 93.6%;
+  left: 52.5%;
+  display: none;
+}
+
+.email-error-message {
+  display: none;
+  font-style: italic;
+  background-color: var(--Red-400);
+  color: var(--Grey-50);
+  padding: 0.5rem 0 0.5rem 1rem;
+  font-weight: 500;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .footer {
@@ -506,7 +550,7 @@ button {
 }
 
 .features::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: var(--Blue-600);
   top: 57%;
@@ -523,7 +567,7 @@ button {
 }
 
 .hero-section::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: var(--Blue-600);
   background-size: cover;
